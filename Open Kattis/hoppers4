@@ -1,0 +1,70 @@
+#include <set>
+#include <vector>
+#include <iostream>
+using namespace std;
+
+bool find_odd(vector <set <int> > &graph, int &node, int &N, vector <int>
+				&color_arr) {
+	color_arr[node] = 1;
+	vector <int> q;
+	q.push_back(node);
+		
+	while (!q.empty()) {
+		int u = q.back();
+		q.pop_back();
+		left.erase(q);
+
+	for (set <int> :: iterator it = graph[u].begin; it != graph[u].end(); it++) {
+		if (color_arr[v]) {
+			if (color_arr[v] == color_arr[u]) {
+				odd = true;
+			}
+		} else {   
+			color_arr[v] = -color_arr[u];
+			q.push_back(v);
+		}
+	}
+	return odd;
+}
+
+int main() {
+	int N, M;
+	cin >> N >> M;
+	vector < set <int> > graph(N);
+	int A, B;
+	while (M--) {
+		cin >> A >> B;
+		//cerr << "A: " << A << "B: " << B << endl;;
+		graph[A - 1].insert(B - 1);
+		graph[B - 1].insert(A - 1);
+	}
+
+	set <int> left;
+	vector <int> color_arr (N, 0);
+
+	for (int i =0; i < N; i++) {
+		left.insert(i);
+	}
+	
+	int components = 0;	
+
+	bool odd;
+	int node;
+	while (!left.empty()) {
+		node = 	*left.begin();
+	
+		if (find_odd(graph, node, N, color_arr)) {
+			odd = true;
+		}
+		components += 1
+	}
+
+	if odd {
+		cout << components - 1 << endl;
+	} else {
+		cout << components << endl;
+	}
+	
+	return 0;
+}
+

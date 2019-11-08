@@ -1,0 +1,19 @@
+[main] hoppers 1000 (0) exception: trapped!
+[main] hoppers 1000 (0) exception: code 0xC0000005 at 0x4011DB
+[main] hoppers 1000 (0) exception: ax 0x8 bx 0xA032134 cx 0x8 dx 0x8
+[main] hoppers 1000 (0) exception: si 0x8 di 0xA031C90 bp 0x247FEF0 sp 0x247FE74
+[main] hoppers 1000 (1) exception: exception is: STATUS_ACCESS_VIOLATION
+[main] hoppers 1000 (0) stack: Stack trace:
+[main] hoppers 1000 (0) stack: frame 0: sp = 0x247F980, pc = 0x6100A2C3
+[main] hoppers 1000 (0) stack: frame 1: sp = 0x247F9BC, pc = 0x772A8DA2
+[main] hoppers 1000 (0) stack: frame 2: sp = 0x247F9E0, pc = 0x772A8D74
+[main] hoppers 1000 (0) stack: frame 3: sp = 0x247FAAC, pc = 0x77294216
+[main] hoppers 1000 (0) stack: frame 4: sp = 0x247FEF0, pc = 0x61004402
+[main] hoppers 1000 (0) stack: frame 5: sp = 0x247FF38, pc = 0x61004420
+[main] hoppers 1000 (0) stack: frame 6: sp = 0x247FF44, pc = 0x41333E
+[main] hoppers 1000 (0) stack: frame 7: sp = 0x247FF54, pc = 0x40103A
+[main] hoppers 1000 (0) stack: frame 8: sp = 0x247FF70, pc = 0x77086359
+[main] hoppers 1000 (0) stack: frame 9: sp = 0x247FF80, pc = 0x77287B74
+[main] hoppers 1000 (0) stack: frame 10: sp = 0x247FFDC, pc = 0x77287B44
+[main] hoppers 1000 (0) stack: frame 11: sp = 0x247FFEC, pc = 0x0
+[main] hoppers 1000 (0) stack: End of stack trace
